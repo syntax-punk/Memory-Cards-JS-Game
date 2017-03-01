@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+* {
+  border-radius: 10px;
+}
+#cardboard {
+  overflow: auto;
+  margin: 5px auto;
+  padding: 10px;
+  background-color: #CFD8DC;
+}
+
+#startbtn {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 120px;
+}
+
+#winner {
+  text-align: center;
+  font-family: 'Fugaz One', cursive;
+  color: white;
+  line-height: 240px;
+  font-size: 3em;
+  position:fixed;
+  top: 50%;
+  width: 100%;
+  height: 240px;
+  margin-top: -120px;
+  background-color: #00b489;
+}
+
+#player1 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+#player2 {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+#timer {
+  width: 100px;
+  margin: auto;
+}
+
+#timer h2 {
+  padding: 0;
+  margin: 4px;
+  display: block;
+}
+
+#score1, #score2 {
+  color: #00b489;
+  font-size: 2em;
+  padding: 5px;
+}
+
+.middlebtn {
+  top: 50%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+}
+
+.card {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  float: left;
+  margin: 5px;
+}
+
+.card div {
+  border: 2px solid #191970;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.card .front {
+  background-color: #1E90FF;
+}
+
+.back img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.clearleft {
+  clear: left;
+}
+
+.turn {
+  box-shadow: 0 10px 5px #888888;
+}
+
+.flipped{}
+
+.matched{}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  padding: 10px;
+  top: 0;
+  margin: 0;
+}
+
+header h2 {
+  font-family: 'Righteous', cursive;
+  display: inline-block;
+  padding: 5px;
+}
+
+
+span h2 {
+  margin: 5px;
+}
