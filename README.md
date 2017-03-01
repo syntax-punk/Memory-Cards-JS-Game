@@ -1,4 +1,2 @@
-Assignment 5B
-=============
+Lore Memo Cards Game
 
-Add your files here.  The page should be called `index.html`.
