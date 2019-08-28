@@ -46,12 +46,15 @@ function prepareBoard() {
       var divFront = $("<div></div>").addClass("front");
       var divBack = $("<div></div>").addClass("back");
       var img = $("<img>");
-      img.attr("src", "images/img" + array.shift() + ".jpg");
+
+      var sourceName = "img" + array.shift() + ".jpg";
+      img.attr("src", "images/" + sourceName);
       if (c === 0) {
         div.addClass("clearleft");
       }
       divBack.append(img);
       div.append(divFront).append(divBack);
+      div.attr("data-image-source", sourceName);
       // set card on the board
       $("#cardboard").append(div);
     }
@@ -94,7 +97,7 @@ function clickhandler() {
     var firstCard = flipped.first();
     var secondCard = flipped.last();
     // compare cards
-    if (firstCard.html() === secondCard.html()) {
+    if (firstCard.data("imageSource") === secondCard.data("imageSource")) {
       player === true
         ? $("#score1").text(++points1)
         : $("#score2").text(++points2);
@@ -104,15 +107,9 @@ function clickhandler() {
     } else {
       firstCard.removeClass("flipped");
       secondCard.removeClass("flipped");
-      if (player) {
-        player = false;
-        $("#player1").toggleClass("turn");
-        $("#player2").toggleClass("turn");
-      } else {
-        player = true;
-        $("#player2").toggleClass("turn");
-        $("#player1").toggleClass("turn");
-      }
+      player = !player;
+      $("#player1").toggleClass("turn");
+      $("#player2").toggleClass("turn");
       // flip cards back
       setTimeout(function() {
         firstCard.flip("toggle");
