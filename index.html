@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lorem Memo Cards</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-  <script src="js/game.js"></script>
-  <link rel="stylesheet" href="css/master.css">
-</head>
-<body>
-  <header>
-    <span id="player1">
-      <h2>Player 1:</h2> <h2 id="score1"></h2>
-    </span>
-    <span id="player2">
-      <h2>Player 2:</h2> <h2 id="score2"></h2>
-    </span>
-    <div id="timer">
-      <h2 id="time"></h2>
-      <h2>flips: <span id="totalflips"></span></h2>
-    </div>
-  </header>
-    <div id="winner">
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lorem Memo Cards</title>
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <header>
+      <span id="player1">
+        <h2>Player 1:</h2>
+        <h2 id="score1"></h2>
+      </span>
+      <span id="player2">
+        <h2>Player 2:</h2>
+        <h2 id="score2"></h2>
+      </span>
+      <div id="timer">
+        <h2 id="time"></h2>
+        <h2>flips: <span id="totalflips"></span></h2>
+      </div>
+    </header>
+    <div id="winner"></div>
     <form action="" name="layout_form">
-        <input type="image" src="images/playbtn.png" id="startbtn" class="middlebtn">
+      <input
+        type="image"
+        src="images/playbtn.png"
+        id="startbtn"
+        class="middlebtn"
+      />
     </form>
     <div id="cardboard"></div>
-</body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="js/game.js"></script>
+  </body>
 </html>
